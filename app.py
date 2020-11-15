@@ -12,9 +12,9 @@ mongo = PyMongo(app)
 # set up the route for the HTML page
 
 @app.route("/")
-def index():
-   mars = mongo.db.mars.find_one() #  uses PyMongo to find the "mars" collection in our database, which we will create when we convert our Jupyter scraping code to Python Script. We will also assign that path to themars variable for use later.
-   return render_template("index.html", mars=mars) # tells Flask to return an HTML template using an index.html file. # We'll create this file after we build the Flask routes, mars = mars tells python to use the 'mars' collection in mongodb
+def index(): # ction in our database, which we will create when we convert our Jupyter scraping code to Python Script. We will also assign that path to themars variable for use later.
+   mars = mongo.db.mars.find_one() #  uses PyMongo to find the "mars" colle
+   return render_template("index2.html", mars=mars) # tells Flask to return an HTML template using an index.html file. # We'll create this file after we build the Flask routes, mars = mars tells python to use the 'mars' collection in mongodb
 
 # set up the scrape route
 @app.route("/scrape") 
