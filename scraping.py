@@ -90,11 +90,11 @@ def featured_image(browser):
 
 # ## Mars Facts
 def mars_facts():
-    #try:
+    try:
     # use 'read_html' to scrape the facts table into a dataframe
-    df = pd.read_html('https://space-facts.com/mars/')[0]
-    #except BaseException:
-     #   return None
+        df = pd.read_html('https://space-facts.com/mars/')[0]
+    except BaseException:
+        return None
 
     # assign columns and set index to dataframe   
     df.columns=['Description', 'Mars']
